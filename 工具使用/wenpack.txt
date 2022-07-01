@@ -1,0 +1,29 @@
+output属性 webpack应该在哪里以怎样的方式去防止打包好的文件
+      1、path webpack生成文件输出位置
+       2、publicpath 多被一些webpack的插件使用，在html文件以生产环境方式构建的时候，更新css文件内的url地址。
+loader和plugin属性：
+	通俗点讲loader是转换，plugin是执行比转换更复杂的任务，比如合并压缩等
+	loader:让webpack能够处理非js文件，然后你就可以利用 webpack 的打包能力，对它们进行处理。
+	例如：css-loader、style-loader、postcss-loader、sass-loader
+	plugins:从打包优化和压缩，一直到重新定义环境中的变量.
+	例如：uglify-webpack-plugin、clean-webpack-plugin、babel-polyfill
+module中的一些属性例子：
+	module: {
+ 	rules: [
+ 	{
+	 test: /\.js$/, //以 .js 结尾的文件。//test后一般用正则表达式
+ 	use: ["babel-loader"], //使用babel-loader 对以.js结尾的文件进行解析。
+ 	include: path.resolve(__dirname, 'src') //通过include 规定只匹配src目录下的js文件。
+ 	},
+	 {
+ 	test: /\.css$/, //匹配以 .css结尾的文件
+ 	use: ['style-loader', 'css-loader'], //可以看到 use 后跟的是一个数组，所很明显我们可以使用一组 loader 来对某一种文件进行解析，但是这里需要注意的是，解析顺序是从右到左，也就是：css文件 -> css-loader->style-loader，完成解析。
+ 	exclude: path.resolve(__dirname, 'node_modules'), //通过exclude排除 node_modules 目录下的所有文件。
+ 	},
+	 {
+ 	test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/, // 匹配非文本文件
+	 use: ['file-loader'], //使用 file-loader 来进行解析。
+	 },
+	 ]
+	}
+optinos：属性是对loader进行的一些配置
