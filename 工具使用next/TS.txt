@@ -1,0 +1,29 @@
+类型申明
+联合类型：
+let myFavoriteNumber: string | number;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
+对象的类型--接口：
+interface Person {
+    name: string;
+    age: number;
+/*  age?:number*/   //如果这么写，这个属性变为可选属性;
+}
+let tom: Person = {
+    name: 'Tom',
+    age: 25
+};
+type创建类型别名
+元组：
+let tom: [string, number];
+tom[0] = 'Tom';
+tom[1] = 25;
+枚举enum：取值被限定在一定范围内
+类class新增方法:
+   public private protected
+接口:对类的一部分行为进行抽象。
+typescript中接口可以继承类
+泛型：定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型
+
+
+

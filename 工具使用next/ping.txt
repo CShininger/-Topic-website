@@ -1,0 +1,2 @@
+for /L %i IN (1,1,254) DO ping -w 2 -n 1 主机ip地址.%i     //ping此号段所有ip
+arp -a 显示所有ping通主机

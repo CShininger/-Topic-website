@@ -1,0 +1,21 @@
+使用git要设置用户名和密码和邮箱
+git config --global user.name/user.email/user.password ""
+
+
+https：
+git clone [url] 远程仓库拉到本地/git pull获取最新数据，即本地有版本库/每次记得更新不然冲突起
+显示隐藏的文件夹.git 修改config文件中添加token//github令牌//
+文件修改后，使用git add []添加到本地仓库，git commit -m "注释"//
+git push上传远程//报443错误多试几次
+
+SSH：
+执行ssh-keygen -t rsa -C "邮箱"//建立私钥，生成后找到对应文件，将私钥拷贝到github
+在github上ssh模块新建私钥，上传刚才拷贝的。
+本地仓库可以向远程仓库上传文件//其余内容同https
+
+分支结构：
+ 查看分支：git branch
+ 创建分支：git branch 分支名
+ 切换分支:   git checkout 分支名
+ 删除分支： git branch -d 分支名
+ 合并分支： git merge 被合并的分支名

@@ -1,0 +1,35 @@
+JSON超集
+JSON.stringfy编码为UTF-8（必须），未能编码成UTF-8的通过代码转义序列来表示
+ es支持所有json支持的版本，”增强JSON.stringify能力'
+Function.prototype.toString有了严格规范，，"函数的源码是什么就返回什么"；算法：略\
+Array.prototype.sort() 跟新排序方式为数据结构-“稳定排序”
+Optional Catch Binding 提案中，“可无视异常内容，直接进行错误处理”。catch可以随便写
+Symbol.prototype.description’ES10的新特性，“用来获取Symbol字符串的描述”。
+String.prototype.{trimStart:"去除头部空格",trimEnd“去除尾部空格”，trimLeft“同trimStart”,trimRight：”同trimEnd“}
+Object.fromEntries() 把键值对列表转换为一个对象，和 Object.entries() 相对的
+Array.prototype.flat 是数组扁平化方法，按照一个"指定的深度递归遍历数组"，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
+Array.prototype.flatMap 方法首先"使用 map 函数映射数组的每个元素"，然后再为每个元素调用一下 flat 函数，相当于"先 map 后 flat "。
+Template Literal Revision：移除了对 ECMAScript 在"带标签的模版字符串中转义序列的语法限制“
+Promise.prototype.finally(),"promise无论成功与否都要执行一次"
+
+正则表达式RegExp:
+(dotAll) flag for regular expressions:通过添加了新的标识符 /s，表示 . 这个标志可以匹配任何值。
+............................................
+rest/spread新特性:解构赋值时，rest收集剩余属性||在对象字面量中，展开对象
+#####################################################################################
+Array.prototype.includes() 接收两个参数：要搜索的值和搜索的开始索引。和Es6的indexOf式类似的，前者返回true或false；indexof返回1或0
+Exponentiation operator (**)| 求幂运算符（**）：返回将第一个操作数加到第二个操作数的幂的结果。它等效于Math.pow，不同之处在于它也接受 BigInts 作为操作数。
+Async functions
+共享内存和原子
+Object.keys()回的是对象的键值对中键名key并且返回数组的顺序
+  Object.values() 返回值是一个数组，但它返回的是对象的键值对中属性值value
+Object.entries() 将一个对象中可枚举属性的键名和键值按照二维数组的方法返回，若对象是数组，则会将数组的下标作为键值返回
+padStart() 方法是在当前字符串的头部填充字符串到指定目标长度
+语法：str.padStart（length[，padStr]）length：填充的目标长度，如果小于当前字符串的长度则会忽略
+          padStr：填充的字符串，默认为空字符串("")返回值：在当前字符串头部填充字符串到指定目标长度的新字符串
+padEnd()在当前字符串的尾部填充字符串到指定目标长度
+语法：str.padEnd(length[ ，padStr ])length：填充的目标长度，如果小于当前字符串则会忽略
+padStr：填充的字符串，默认为空字符串 返回值：在当前字符串的尾部填充字符串到指定长度的新字符串
+Object.getOwnPropertyDescriptors()方法，返回某个对象属性的描述对象
+Object.getOwnPropertyDescriptors()方法，返回指定对象所有自身属性（非继承属性）的描述对象。
+函数参数列表和调用中的尾随逗号

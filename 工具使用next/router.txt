@@ -1,0 +1,21 @@
+注册路由表：引入useRoutes
+const element=useRoutes（路由表）
+  {elemrnt}//注册路由表。。。
+路由跳转：link NavLink 
+           navigate=useNavigate()
+  	 使用navigate进行路由跳转
+        跳转位置使用<outlet>
+ 传递参数：props{
+		params
+			跳转路由url加上/key:value/key:value
+			index路由表加上/:key/:key
+			接收参数const params = useParams()
+		search类似paray
+			url地址栏参数加上？key=value？。。
+			index路由表无需更改
+			接收参数const [search,setSearch]=userSearchParams()
+      		          const key = search.get('key')获取参数
+		state
+			const {state} = useLocation()
+			state取得参数
+}
